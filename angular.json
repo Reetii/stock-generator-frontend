@@ -24,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
+              "src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -119,6 +118,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stock-generator-frontend"
+    }
+  },
+  "defaultProject": "stock-generator-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

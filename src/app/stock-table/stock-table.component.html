@@ -1,0 +1,25 @@
+<div class="container" style="margin-top:5%">
+  <alert type="info" *ngIf="updated">
+    <strong>{{message}}</strong>
+  </alert>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Stock Name</th>
+      <th scope="col">Change Percentage</th>
+      <th scope="col">Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stock of stocks; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{stock['companyName']}}</td>
+      <td [ngClass]="{'red-color': stock['percentageChange'] < 0, 'green-color': stock['percentageChange'] > 0 }">{{stock['percentageChange'].toFixed(2)}}</td>
+      <td>{{stock['stockPrice']['volume']}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
